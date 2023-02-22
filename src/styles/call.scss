@@ -4,10 +4,6 @@
   &__content {
     position: relative;
     height: calc(100vh - #{$menu-height} - #{$footer-height});
-
-    @include onMobile {
-      height: calc(100vh - #{$menu-height-mobile} - #{$footer-height-mobile});
-    }
   }
 
   &__deposit {
