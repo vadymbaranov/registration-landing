@@ -1,0 +1,141 @@
+.footer {
+  margin: 0 auto;
+
+  height: $footer-height;
+  background: $footer-background;
+
+  @include onMobile {
+    height: $footer-height-mobile;
+  }
+
+  &__content {
+    margin-bottom: 95px;
+
+    padding-top: 91px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 99px;
+
+    @include onMobile {
+      margin-bottom: 45px;
+      padding-top: 0px;
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__logo {
+    text-decoration: none;
+
+    @include onMobile {
+      margin-bottom: 43px;
+      position: absolute;
+      top: 190px;
+      left: 125px;
+    }
+
+    &-img {
+      height: 26px;
+      font-size: 26px;
+      font-weight: 800;
+      color: $text-color;
+
+      @include onMobile {
+        height: 26px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    background: $main-green;
+    padding: 2px;
+    width: 980px;
+    border-radius: 100px;
+    position: relative;
+
+    @include onMobile {
+      padding: 1px;
+      width: 320px;
+      border-radius: 70px;
+    }
+  }
+
+  &__icons {
+    @include onMobile {
+      margin-bottom: 42px;
+    }
+
+    &--img {
+      @include onMobile {
+        display: none;
+      }
+    }
+
+    &--img-mobile {
+      display: none;
+
+      @include onMobile {
+        display: initial;
+      }
+    }
+  }
+}
+
+.form {
+  &__input {
+    position: relative;
+    top: 0px;
+    left: 1px;
+    height: 40px;
+    width: 799px;
+    background-color: $text-color;
+    border-radius: 85px;
+    border: none;
+    z-index: 1;
+
+    @include onMobile {
+      height: 30px;
+      width: 211px;
+      border-radius: 60px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    top: -0.5px;
+    left: 0px;
+    height: 44px;
+    width: 179px;
+    border-radius: 99px;
+    border: none;
+    text-align: center;
+
+    background: transparent;
+    color: $text-color;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 17px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    @include onMobile {
+      height: 32px;
+      width: 97px;
+      border-radius: 70px;
+
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 15px 5px #63D737, inset 0px 10px 27px -8px #058048;
+
+      @include onMobile {
+        box-shadow: 2px 2px 8px 2px #63D737, inset 0px 5px 14px -4px #058048;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.menu {
+  margin: 0 auto;
+  width: 100%;
+  height: $menu-height;
+
+  background: $header-background, $footer-background;
+  mix-blend-mode: normal;
+
+  @include onMobile {
+    height: $menu-height-mobile
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    @include top-actions;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0 19px;
+  }
+}
+
+.links {
+  &--cabinet {
+    font-weight: 600;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &--registration {
+    width: 130px;
+    height: 30px;
+    border-radius: 397px;
+    background: $main-green;
+    border: none;
+
+    color: $text-color;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    @include onMobile {
+      width: 87px;
+      height: 22px;
+      border-radius: 241px;
+
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 15px 5px #63D737, inset 0px 10px 27px -8px #058048;
+
+      @include onMobile {
+        box-shadow: 2px 2px 8px 2px #63D737, inset 0px 5px 14px -4px #058048;
+      }
+    }
+  }
+}

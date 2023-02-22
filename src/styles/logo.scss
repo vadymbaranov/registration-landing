@@ -1,0 +1,15 @@
+.logo {
+  text-decoration: none;
+
+  &__img {
+    height: 26px;
+    font-size: 26px;
+    font-weight: 800;
+    color: $text-color;
+
+    @include onMobile {
+      height: 18px;
+      font-size: 18px;
+    }
+  }
+}

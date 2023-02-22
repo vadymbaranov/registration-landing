@@ -1,0 +1,22 @@
+.input-field {
+  padding-left: 26px;
+
+  @include onMobile {
+    padding-left: 12px;
+  }
+
+  &::placeholder {
+    color: $input-text-color;
+    font-size: 17px;
+    line-height: 25px;
+
+    @include onMobile {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
