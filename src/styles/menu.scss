@@ -7,7 +7,7 @@
   mix-blend-mode: normal;
 
   @include onMobile {
-    height: $menu-height-mobile
+    height: $menu-height-mobile;
   }
 
   &__content {
